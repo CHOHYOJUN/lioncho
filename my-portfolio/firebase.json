@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
+
+// profile.lioncho.com
+// google-site-verification=p0PTrjUn0tKucZLk4pjczEMXdWX-Xku7alXTYSB8W4c
