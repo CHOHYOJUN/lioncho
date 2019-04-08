@@ -87,6 +87,14 @@
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
+            <v-btn
+              flat icon
+              large
+              href=https://github.com/CHOHYOJUN
+              target="_blank"
+              >
+              <v-icon color="indigo">fab fa-github</v-icon>
+            </v-btn>
       <v-toolbar-items>
         <v-btn
         flat
@@ -97,7 +105,7 @@
         exact
         :to="{name: 'portfolio'}"
         >project</v-btn>
-        <v-btn flat>Link Two</v-btn>
+        <!-- <v-btn flat>Link Two</v-btn> -->
       </v-toolbar-items>
     </v-toolbar>
 
@@ -107,13 +115,21 @@
       >
             <router-view/>
       </v-container>
+
     </v-content>
+      <v-footer class="pa-3">
+    <v-icon>email</v-icon>
+    <span>
+    lionjerher84@gmail.com
+    </span>
+    <v-spacer></v-spacer>
+    <div>&copy; {{ new Date().getFullYear() }}</div>
+  </v-footer>
   </v-app>
 </div>
 </template>
 
 <script>
-
 export default {
   name: 'App',
   data () {

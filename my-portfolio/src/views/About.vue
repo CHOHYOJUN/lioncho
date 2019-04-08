@@ -13,20 +13,18 @@
         justify-center
       >
         <v-avatar
-          :tile="tile"
           size="250"
           class="grey lighten-4"
         >
           <img src="lioncho.jpg" alt="avatar">
         </v-avatar>
-
       </v-flex>
       <v-flex>
 
       <v-tabs
         fixed-tabs
         v-model="currentItem"
-        color="transparent"
+        color="grey lighten-4"
         slider-color="primary"
         slot="extension"
       >
@@ -37,14 +35,13 @@
         >
           <h3>{{ tabitem }}</h3>
         </v-tab>
-
       </v-tabs>
 
     <v-tabs-items v-model="currentItem">
       <v-tab-item
         v-for="(tabitem, index) in tabItems"
         :key="tabitem"
-        :id="'tab-' + tabitem"
+        :value="'tab-' + tabitem"
       >
         <v-card flat>
           <v-card-text>
@@ -53,10 +50,13 @@
               <MySkill></MySkill>
             </template>
             <template v-if="index===1">
-              핵심역량
+              <MyCore></MyCore>
             </template>
             <template v-if="index===2">
               <Company></Company>
+            </template>
+            <template v-if="index===3">
+              <Etc></Etc>
             </template>
           </v-card-text>
         </v-card>
@@ -70,13 +70,14 @@
 <script>
 import MySkill from '@/components/MySkill'
 import Company from '@/components/Company'
+import Etc from '@/components/Etc'
+import MyCore from '@/components/MyCore'
 
 export default {
-
     data: () => ({
       currentItem: 'tab-Web',
       tabItems: [
-        '보유기술', '핵심역량', '경력', 'Images'
+        '보유기술', '핵심역량', '경력', '현재 사이트'
       ],
       text: [
         true,
@@ -86,7 +87,7 @@ export default {
       ]
     }),
     components: {
-      MySkill,Company
+      MySkill, Company, Etc, MyCore
     },
     methods: {
 

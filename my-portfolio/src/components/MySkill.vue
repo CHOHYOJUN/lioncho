@@ -3,7 +3,7 @@
   grid-list-lg
   >
     <v-data-iterator
-      items="4"
+      items=4
       content-tag="v-layout"
       hide-actions
       row
@@ -81,12 +81,12 @@
   export default {
     data: () => ({
       javaLists: [
-          "- JSP : 중",
-          "- Servlet : 중",
-          "- Strutrs2 : 중",
-          "- Spring : 중",
-          "- SpringBoot : 중",
-          "- MyBitys3 : 중",
+          "- JSP",
+          "- Servlet",
+          "- Strutrs2",
+          "- Spring",
+          "- SpringBoot",
+          "- MyBitys3",
 
       ],
       jsLists: [
@@ -105,7 +105,7 @@
 
       ],
       clLists: [
-        "- AWS",
+        "- AWS EC2",
         "- Firebase",
         "- TOAST(NHN)",
       ],
